@@ -1,0 +1,13 @@
+<h3>Top Users</h3>
+<div class="grid grid-pad">
+  <ul class="dashboard--list">
+    <li *ngFor="let user of users"  [routerLink]="['/profile']"  class="col-1-4 dashboard--item">
+      <div class="module">
+        <h4 class="dash-item">{{user.name.title}} {{user.name.first}} {{user.name.last}}</h4>
+      </div>
+    </li>
+  </ul>
+  <div class="dashboard-chart">
+    <chart [options]="options"></chart>
+  </div>
+</div>
